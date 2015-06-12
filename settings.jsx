@@ -838,27 +838,7 @@ var FeedSettings = React.createClass({
 	},
 	_onInputChange: function(){
 		var input_data = RouteStore.getCurrentInput();
-		this.setState({ inputData: input_data, 
-						pullFreq: input_data.pullFreq,
-						preferSummary: input_data.preferSummary,  });
-
-		if (input_data.attrs) {
-			this.setState({ prefixText: input_data.attrs.prefixText, 
-							prefixSpace: input_data.attrs.prefixSpace, 
-							postfixText: input_data.attrs.postfixText, 
-							postfixSpace: input_data.attrs.postfixSpace });
-		}
-
-		if (input_data.rules){
-			this.setState({ search: input_data.rules.search, 
-							replace: input_data.rules.replace, 
-							find: input_data.rules.find, 
-							searchCase: input_data.rules.case });
-		}
-
-		if (input_data.filters) {
-			this.setState({ all: input_data.filters.all, any: input_data.filters.any, none: input_data.filters.none, words: input_data.filters.words });
-		}
+		this.setState({ inputData: input_data});
 	},
 	getUrlParam: function(){
 		var input_id = this.context.router.getCurrentParams().inputId;
