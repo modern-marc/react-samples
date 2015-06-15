@@ -1,2 +1,2 @@
 # react-samples
-Sample of some on the components I've built with react
+Sample of some of the components I've built with react
